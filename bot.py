@@ -1,14 +1,15 @@
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler
 
-import os
-TOKEN = os.getenv("8616432268:AAGzdmmpsoJui72VTGp0g__duEUIsVglU5s")
+TOKEN = os.getenv("TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [InlineKeyboardButton("🚀 Join Now", url="https://t.me/+L3hwr8UfKuw3MjVl")],
         [InlineKeyboardButton("💰 Earn Info", callback_data="earn")]
     ]
+
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
@@ -34,5 +35,4 @@ app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(button))
 
-print("Bot is running...")
 app.run_polling()
