@@ -11,13 +11,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("🎁 Bonus", callback_data="bonus")],
         [InlineKeyboardButton("👑 VIP", callback_data="vip")],
         [InlineKeyboardButton("📝 Register", url="http://www.sikkimgg.org/#/register?invitationCode=424436675902")],
-        [InlineKeyboardButton("📞 Contact Support", url="https://t.me/@Jerinn_1")]
+        [InlineKeyboardButton("📞 Contact Support", url="https://t.me/Jerinn_1")]
     ]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "🔥 Welcome to ProPlay Bot!\n\n💸 Earn daily income easily\n👇 Click below to start",
+        "🔥 Welcome to ProPlay Bot!\n\n💸 Turn your gameplay into real earning potential\n\n🚀 Join players who are leveling up every day\n\n👑 VIP Access Unlocks:\n• Private forecasts\n• Premium insights\n• Priority support\n\n👉 Start now & build your winning journey!",
         reply_markup=reply_markup
     )
 
