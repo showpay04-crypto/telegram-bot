@@ -1,1 +1,1 @@
-worker: python done.py
+worker: python color.py
